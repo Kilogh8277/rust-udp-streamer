@@ -25,7 +25,5 @@ fn main() -> std::io::Result<()>{
         client_stream.read(&mut buf).expect("Failed to read TCP stream");
 
         print!("Received TCP message from {1}: {0}", std::str::from_utf8_mut(&mut buf[..amt]).unwrap(), client_addr);
-
-        // socket.send_to(&buf, "192.168.68.50:5000").expect("Couldn't send the data");
     }
 }
